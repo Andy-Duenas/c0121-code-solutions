@@ -2,29 +2,26 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  border-color: blue;
+  border-style: solid;
 }
 
 .row {
   width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  border-color: green;
+  border-style: solid;
+  height: 100%;
 }
 
 body {
   font-family: sans-serif;
 }
 
-.column-one-half > p {
-  width: 33rem;
-}
-
-.column-one-half > img {
-  width: 90%;
-  height: 90%;
-}
-
-.column-one-fourth > img {
-  width: 100%;
+.column-one-fourth {
+  border-color: red;
+  border-style: solid;
+  align-items: calc(100% / 4);
 }
