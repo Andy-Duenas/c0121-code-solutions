@@ -2,18 +2,10 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  border-color: blue;
-  border-style: solid;
 }
 
 .row {
-  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  border-color: green;
-  border-style: solid;
-  height: 100%;
 }
 
 body {
@@ -21,7 +13,9 @@ body {
 }
 
 .column-one-fourth {
-  border-color: red;
-  border-style: solid;
-  align-items: calc(100% / 4);
+  flex-basis: calc(100% / 4);
+}
+
+.imgs {
+  width: 100%;
 }
