@@ -1,7 +1,57 @@
+
 .container {
   max-width: 800px;
+  margin: auto;
+  font-family: 'Karla', Arial, Helvetica, sans-serif;
+}
+
+.full-column {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  border-color: purple;
+  border-style: solid;
 }
 
 .row {
+  border-color: green;
+  border-style: solid;
+  text-align: center;
   display: flex;
+}
+
+.column-half {
+  display: flex;
+  justify-content: center;
+  border-color: black;
+  border-style: solid;
+}
+
+.img-container {
+  width: 100%;
+  border-color: aqua;
+  border-style: solid;
+}
+
+.column-title {
+  text-align: left;
+  border-color: hotpink;
+  border-style: solid;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  border-color: red;
+  border-style: solid;
+}
+
+p {
+  font-size: 14px;
+  line-height: 23px;
+  color: rgb(143, 143, 143);
+  border-color: orange;
+  border-style: solid;
 }
