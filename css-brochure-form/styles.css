@@ -1,5 +1,10 @@
+
+.container {
+  max-width: 350px;
+}
+
 h4 {
-  margin-left: 7.6rem;
+  text-align: center;
   padding-top: 2rem;
   font-size: 15px;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
@@ -35,7 +40,6 @@ select {
 button {
   font-size: 12px;
   font-weight: 500;
-  margin-left: 16.5rem;
   margin-top: 0.5rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
@@ -46,6 +50,11 @@ button {
   border: none;
   border-radius: 15px;
   font-family: 'Brandon Grotesque', Arial, Helvetica, sans-serif;
+}
+
+.button-move {
+  text-align: right;
+  margin-right: 1rem;
 }
 
 .selectBackground {
