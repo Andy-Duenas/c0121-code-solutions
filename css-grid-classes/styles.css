@@ -16,6 +16,11 @@ body {
   flex-basis: calc(100% / 4);
 }
 
+.column-one-half {
+  width: 80%;
+  font-size: 14px;
+}
+
 .imgs {
   width: 100%;
 }
