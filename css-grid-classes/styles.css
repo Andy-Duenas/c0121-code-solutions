@@ -12,15 +12,22 @@ body {
   font-family: sans-serif;
 }
 
+.column-full {
+  width: 100%;
+}
+
 .column-one-fourth {
   flex-basis: calc(100% / 4);
 }
 
-.column-one-half {
-  width: 80%;
-  font-size: 14px;
-}
-
 .imgs {
   width: 100%;
+}
+
+.column-two-thirds {
+  width: 66%;
+}
+
+.column-one-third {
+  width: 33%;
 }
