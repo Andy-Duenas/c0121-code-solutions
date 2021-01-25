@@ -1,0 +1,57 @@
+.container {
+  max-width: 800px;
+  background-color: #1996da;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainHead {
+  font-weight: 400;
+  color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.img {
+  width: 55%;
+  margin: 15px;
+}
+
+.column-one-third {
+  width: 100%;
+  text-align: center;
+}
+
+.column-full {
+  text-align: center;
+  margin: auto;
+}
+
+.heads3 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.dot {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: white;
+}
+
+p {
+  margin-top: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 13px;
+  color: gainsboro;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
