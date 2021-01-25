@@ -4,8 +4,7 @@ html {
 
 .page-title {
   font-size: 3rem;
+  width: 100%;
   text-align: center;
   position: fixed;
-  left: 550px;
-  top: 100px;
 }
