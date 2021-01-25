@@ -28,7 +28,7 @@ header {
 }
 
 .logo-blue-container {
-  width: 13%;
+  width: 10%;
   margin-left: 8rem;
 }
 
@@ -55,7 +55,6 @@ header {
 .contact-us-button {
   font-family: 'Avenir', Arial, Helvetica, sans-serif;
   font-size: 20px;
-  align-self: center;
   color: white;
   border-style: none;
   background-color: rgb(41, 68, 100);
@@ -65,32 +64,82 @@ header {
 }
 
 .column-background {
-  width: 80%;
+  width: 85%;
   height: 40rem;
   margin-top: 5rem;
   background-image: url("images/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-color: fuchsia;
-  border-style: solid;
 }
 
 .inside-column-background {
-  border-color: blue;
-  border-style: solid;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .title-background {
+  font-family: 'Tiempos Headline', Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  margin-left: 4rem;
+  color: white;
+}
+
+.p-background {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.button-background {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  align-self: center;
+  color: white;
+  border-style: none;
+  background-color: rgb(41, 68, 100);
+  border-radius: 4px;
+  height: 3.5rem;
+  width: 12rem;
+}
+
+.column-full {
+  color: rgb(139, 139, 139);
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+  margin-top: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
   border-color: red;
   border-style: solid;
 }
 
-.p-background {
-  border-color: aqua;
+.top-column {
+  font-family: 'Tiempos Headline', Arial, Helvetica, sans-serif;
+  width: 30%;
+  margin-bottom: 3rem;
+  border-color: blue;
   border-style: solid;
 }
 
-.button-background {
-  border-color: aqua;
+.bottom-column {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  display: flex;
+  line-height: 40px;
+  border-color: orange;
+  border-style: solid;
+}
+
+.bottom-left {
+  width: 50%;
+  border-color: yellow;
+  border-style: solid;
+}
+
+.bottom-right {
+  width: 50%;
+  border-color: pink;
   border-style: solid;
 }
