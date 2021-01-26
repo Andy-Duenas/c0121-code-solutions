@@ -10,7 +10,8 @@ var orderHistory = [
       name: 'JavaScript for impatient programmers',
       type: 'book',
       author: 'Raushmayer, Dr. Axel',
-      cost: 31.55
+      cost: 31.55,
+      img: '/img/javascript-book'
     }]
   },
   {
@@ -24,7 +25,8 @@ var orderHistory = [
       name: 'The Timeless Way of Building',
       type: 'book',
       author: 'Alexander, Christopher',
-      cost: 41.33
+      cost: 41.33,
+      img: '/img/timeless-way-book'
     }]
   },
   {
@@ -37,8 +39,8 @@ var orderHistory = [
     itemList: [{
       name: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
       type: 'electronic',
-      author: null,
-      cost: 15.98
+      cost: 15.98,
+      img: '/img/gamecube-controller-adapter-electronic'
     }]
   },
   {
@@ -51,13 +53,14 @@ var orderHistory = [
     itemList: [{
       name: 'GameCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
       type: 'electronic',
-      author: null,
-      cost: 94.95
+      cost: 94.95,
+      img: '/img/gamecube-controller-electronic'
     }, {
       name: 'The Art of Sql',
       type: 'book',
       author: 'Faroult, Stephane',
-      cost: 33.99
+      cost: 33.99,
+      img: '/img/art-of-sql-book'
     }]
   }
 ];
