@@ -50,3 +50,25 @@ function isOldEnoughToDrive(person) {
 function isOldEnoughToDrinkAndDrive(person) {
   return false;
 }
+
+function categorizeAcidity(pH) {
+  if (pH === 7) {
+    return 'nuetral';
+  } else if (pH >= 0 && pH < 7) {
+    return 'acid';
+  } else if (pH > 7 && pH <= 14) {
+    return 'base';
+  } else {
+    return 'invalid PH level';
+  }
+}
+
+function introduceWarnerBro(name) {
+  if (name === 'yakko' || name === 'wakko') {
+    return "We're the warner brothers!";
+  } else if (name === 'dot') {
+    return "I'm cute~";
+  } else {
+    return 'Goodnight everybody!';
+  }
+}
