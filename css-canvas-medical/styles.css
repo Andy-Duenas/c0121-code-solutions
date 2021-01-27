@@ -30,9 +30,9 @@ header {
   margin-left: 8rem;
 }
 
-.logo-blue {
+.logo {
+  margin-top: 1rem;
   width: 100%;
-  height: 100%;
 }
 
 .menu-button-container {
@@ -65,9 +65,16 @@ header {
   width: 85%;
   height: 40rem;
   margin-top: 5rem;
+  min-width: 85%;
+  min-height: 100%;
   background-image: url("images/hero.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 71, 71, 0.3);
 }
 
 .inside-column-background {
@@ -92,22 +99,22 @@ header {
 
 .button-background {
   font-family: 'Avenir', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   align-self: center;
   color: white;
   border-style: none;
   background-color: rgb(41, 68, 100);
-  border-radius: 4px;
-  height: 3.5rem;
-  width: 12rem;
+  border-radius: 5px;
+  height: 4rem;
+  width: 14rem;
 }
 
 .column-full {
-  color: rgb(139, 139, 139);
+  color: rgb(109, 109, 109);
   width: 100%;
   background-color: rgb(243, 243, 243);
-  margin-top: 4rem;
-  padding-top: 5rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
   padding-bottom: 5rem;
   text-align: center;
   align-items: center;
@@ -127,6 +134,7 @@ header {
 
 .top-column-p {
   font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  font-size: 17px;
   position: relative;
   left: 33%;
   width: 33%;
@@ -135,6 +143,7 @@ header {
 
 .bottom-column {
   display: flex;
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -150,17 +159,101 @@ header {
 }
 
 .column-quarter {
-  width: 100%;
-  border-color: red;
-  border-style: solid;
+  width: 70%;
+  text-align: left;
+  padding-left: 6rem;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  color: rgb(109, 109, 109);
+}
+
+.column-quarter-title {
+  font-family: 'Tiempos Headline' Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.column-quarter-p {
+  margin-top: 0;
+  padding-top: 1rem;
+  font-size: 20px;
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
 }
 
 .column-quarter-button {
-  border-color: orange;
-  border-style: solid;
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .quarter-button {
-  border-color: green;
-  border-style: solid;
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  align-self: center;
+  color: white;
+  border-style: none;
+  background-color: rgb(41, 68, 100);
+  border-radius: 4px;
+  height: 4rem;
+  width: 14rem;
+}
+
+.column-footer {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  display: flex;
+  color: white;
+  background-color: rgb(99, 99, 99);
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  width: 100%;
+  font-weight: 300;
+}
+
+.column-footer-left {
+  width: 50%;
+  padding-left: 5rem;
+}
+
+.column-footer-logo-container {
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+.column-footer-right {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.column-footer-p {
+  font-size: 18px;
+  line-height: 12px;
+}
+
+.column-footer-title {
+  font-size: 25px;
+}
+
+.column-footer-links {
+  color: white;
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 25px;
+}
+
+.column-footer-last {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  margin-left: 4rem;
+  text-align: left;
+}
+
+.column-footer-last-links {
+  color: rgb(109, 109, 109);
+  text-decoration: none;
+  font-size: 23px;
+  padding-left: 3rem;
 }
