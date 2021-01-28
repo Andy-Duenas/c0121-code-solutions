@@ -50,7 +50,7 @@ function logEachCharacter(string) {
 function doubleAll(numbers) {
   var doubled = [];
   for (var i = 0; i < numbers.length; i++) {
-    doubled[i] = numbers[i] * 2;
+    doubled.push(numbers[i] * 2);
   }
   return doubled;
 }
@@ -66,8 +66,7 @@ function getKeys(object) {
 function getValues(object) {
   var values = [];
   for (var key in object) {
-    values[key] = object[key];
-    console.log('Answer:', object[key]);
+    values.push(object[key]);
   }
   return values;
 }
