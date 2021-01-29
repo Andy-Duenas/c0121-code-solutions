@@ -1,0 +1,45 @@
+.container {
+  width: auto;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-full {
+  border-color: red;
+  border-style: solid;
+}
+
+.column-full-title {
+  border-color: aquamarine;
+  border-style: solid;
+}
+
+.column-one-fourth {
+  flex-basis: calc(100% / 5);
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.img-container {
+  width: 100%;
+  height: 80%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.column-title {
+  width: 100%;
+  display: flex;
+}
+
+.column-price {
+  width: 100%;
+  display: flex;
+}
