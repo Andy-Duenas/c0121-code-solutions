@@ -3,31 +3,56 @@
 <head>
   <title>CSS Four Column Layout</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="column-full">
-        <h2>How It Works</h2>
+        <h2 class="column-full-title">How It Works</h2>
       </div>
     </div>
     <div class="row">
-      <div class="column-quarter">
-        <div class="column-container">
-          <img class="phone" src="images/screen-1.png">
+      <div class="column-container">
+        <img class="img-phone" src="images/screen-1.png">
+          <div class="column-bottom-img-container">
+          <img class="img" src="images/switch-icon.png">
+          </div>
+          <h2 class="column-bottom-title">App Switching</h2>
+          <p class="column-bottom-p">Toggles all your apps on and off.</p>
+      </div>
+      <div class="column-container">
+        <img class="img-phone" src="images/screen-2.png">
+        <div class="column-bottom">
+          <div class="column-bottom-img-container">
+            <img class="img" src="images/filter-icon.png">
+          </div>
+          <h2 class="column-bottom-title">Trip Filtering</h2>
+          <p class="column-bottom-p">Evaluates your trip requests.</p>
         </div>
-        <div class="column-container">
-          <img class="phone" src="images/screen-2.png">
+      </div>
+    <div class="column-container">
+      <img class="img-phone" src="images/screen-3.png">
+      <div class="column-bottom">
+        <div class="column-bottom-img-container">
+          <img class="img" src="images/slider-icon.png">
         </div>
-        <div class="column-container">
-          <img class="phone" src="images/screen-3.png">
-        </div>
-        <div class="column-container">
-          <img class="phone" src="images/screen-4.png">
+        <h2 class="column-bottom-title">Service Filters</h2>
+        <p class="column-bottom-p">Accepts only your ideal trips.</p>
+      </div>
+    </div>
+      <div class="column-container">
+        <img class="img-phone" src="images/screen-4.png">
+        <div class="column-bottom">
+          <div class="column-bottom-img-container">
+            <img class="img" src="images/bars-icon.png">
+          </div>
+          <h2 class="column-bottom-title">Stats + Milage</h2>
+          <p class="column-bottom-p">Tracks your trip across all apps.</p>
         </div>
       </div>
     </div>
   </div>
 </body>
-
 </html>

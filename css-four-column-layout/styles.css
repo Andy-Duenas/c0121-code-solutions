@@ -1,0 +1,52 @@
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.column-full-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.column-container {
+  flex-basis: calc(100% / 4);
+  margin-left: 1rem;
+}
+
+.column-bottom-img-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.column-bottom-title {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.column-bottom-p {
+  margin-top: 25px;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.img {
+  width: 25%;
+}
+
+.img-phone {
+  width: 100%;
+}
