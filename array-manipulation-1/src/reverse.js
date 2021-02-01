@@ -1,9 +1,9 @@
 /* exported reverse */
 function reverse(array) {
   var newArray = [];
-  var realLength = array.length;
-  for (var i = 0; i < realLength; i++) {
-    newArray[i] = array.pop();
+
+  for (var i = array.length; i > 0; i--) {
+    newArray.push(array[i - 1]);
   }
   return newArray;
 }
