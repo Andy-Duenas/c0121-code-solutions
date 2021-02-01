@@ -3,19 +3,17 @@
   margin: auto;
 }
 
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
 .row {
   display: flex;
   justify-content: center;
 }
 
-.column-full {
-  border-color: red;
-  border-style: solid;
-}
-
-.column-full-title {
-  border-color: aquamarine;
-  border-style: solid;
+.row-title {
+  font-size: 28px;
 }
 
 .column-one-fourth {
@@ -42,4 +40,16 @@
 .column-price {
   width: 100%;
   display: flex;
+}
+
+.item-name {
+  border-right: bisque;
+  border-right: solid;
+  margin-right: 5px;
+}
+
+.item-size {
+  border-style: solid;
+  border-color: red;
+  margin-left: 5px;
 }
