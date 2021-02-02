@@ -13,7 +13,7 @@ body {
 }
 
 .row-title {
-  font-size: 28px;
+  font-size: 35px;
 }
 
 .column-one-fourth {
@@ -43,13 +43,28 @@ body {
 }
 
 .item-name {
-  border-right: bisque;
-  border-right: solid;
   margin-right: 5px;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 .item-size {
-  border-style: solid;
-  border-color: red;
-  margin-left: 5px;
+  font-size: 18px;
+  border-left: solid 2px;
+  border-left-color: rgb(211, 211, 211);
+  padding-left: 5px;
+  color: rgb(211, 211, 211);
+  margin-bottom: 0;
+}
+
+.item-amount {
+  margin-right: 5px;
+  font-size: 18px;
+  background-color: rgb(252, 242, 227);
+}
+
+.item-old-amount {
+  font-size: 18px;
+  padding-left: 5px;
+  color: rgb(211, 211, 211);
 }
