@@ -16,7 +16,7 @@ body {
   font-size: 35px;
 }
 
-.column-one-fourth {
+.column-one-fifth {
   flex-basis: calc(100% / 5);
   margin-left: 12px;
   margin-right: 12px;
