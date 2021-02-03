@@ -4,11 +4,13 @@ var closeModal = document.querySelector('.pop-button');
 var background = document.querySelector('.pop-out-background');
 
 function handleOpenBackground(event) {
-  background.style.display = 'flex';
+  background.className = 'pop-out-background-on';
 }
-function handleClosingBackground(event) {
-  background.style.display = 'none';
-}
+
 openModal.addEventListener('click', handleOpenBackground);
+
+function handleClosingBackground(event) {
+  background.className = 'pop-out-background';
+}
 
 closeModal.addEventListener('click', handleClosingBackground);
