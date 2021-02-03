@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.button-open {
+  width: 13rem;
+  height: 3rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  border-radius: 3px;
+  font-size: 24px;
+  border-style: none;
+  background-color: rgb(68, 68, 255);
+  color: white;
+  box-shadow: 0 1px 3px 0 rgb(0, 0, 0);
+}
+
+.pop-out-background {
+  display: none;
+}
+
+.pop-out-background-on {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+.pop-out {
+  background-color: white;
+  height: 35%;
+  width: 35%;
+  border-radius: 4px;
+}
+
+.pop-h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  width: 100%;
+  height: 50%;
+  font-size: 30px;
+}
+
+.pop-button-width {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.pop-button {
+  background-color: rgb(235, 93, 93);
+  color: white;
+  width: 7rem;
+  height: 3rem;
+  font-size: 24px;
+  border-style: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 rgb(0, 0, 0);
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
