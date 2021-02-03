@@ -10,12 +10,12 @@
 }
 
 .button-open {
-  width: 11rem;
-  height: 2.5rem;
+  width: 13rem;
+  height: 3rem;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   border-radius: 3px;
-  font-size: 22px;
+  font-size: 24px;
   border-style: none;
   background-color: rgb(68, 68, 255);
   color: white;
