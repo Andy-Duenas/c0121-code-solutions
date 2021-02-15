@@ -1,9 +1,19 @@
 /* eslint-disable no-console */
-var sentence = document.querySelector('.text');
+var $sentence = document.querySelectorAll('span');
+var track = 0;
+
+$sentence[track].className = 'underline';
 
 function handleTextColor(event) {
-  console.log(sentence);
-  console.log('hello');
+  if (event.key === $sentence[track].textContent) {
+    $sentence[track].className = 'green';
+    track++;
+    if (track < $sentence.length) {
+      $sentence[track].className = 'underline';
+    }
+  } else {
+    $sentence[track].className = 'red';
+  }
 }
 
-sentence.addEventListener('keydown', handleTextColor);
+document.addEventListener('keydown', handleTextColor);
