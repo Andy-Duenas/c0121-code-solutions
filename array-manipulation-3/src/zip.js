@@ -15,5 +15,6 @@ function zip(first, second) {
     smallArray.push(second[i]);
     newArray.push(smallArray);
   }
+
   return newArray;
 }
