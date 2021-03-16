@@ -39,11 +39,9 @@ app.get('/api/grades', (req, res) => {
 app.delete('/api/grades/:id', (req, res) => {
   const toDelete = req.params.id;
   let found = false;
-  for (const key in grades) {
-    if (key === toDelete) {
-      delete grades[key];
-      found = true;
-    }
+  if (grades[toDelete]) {
+    delete grades[toDelete];
+    found = true;
   }
   if (found) {
     res.sendStatus(204);
