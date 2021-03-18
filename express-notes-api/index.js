@@ -46,7 +46,7 @@ app.post('/api/notes', (req, res) => {
         res.status(500).json(objToSend);
       }
     });
-    res.status(201).send(objToSend);
+    res.status(201).json(objToSend);
   }
 });
 
@@ -64,7 +64,7 @@ app.delete('/api/notes/:id', (req, res) => {
     fs.writeFile('./data.json', dataString, 'utf8', err => {
       if (err) {
         objToSend.error = 'an unexpected error occured.';
-        res.status(500).send(objToSend);
+        res.status(500).json(objToSend);
       }
       res.sendStatus(204);
     });
@@ -89,10 +89,10 @@ app.put('/api/notes/:id', (req, res) => {
     fs.writeFile('./data.json', dataString, 'utf8', err => {
       if (err) {
         objToSend.error = 'an unexpected error occured.';
-        res.status(500).send(objToSend);
+        res.status(500).json(objToSend);
       }
     });
-    res.status(201).send(objToSend);
+    res.status(201).json(objToSend);
   }
 });
 
