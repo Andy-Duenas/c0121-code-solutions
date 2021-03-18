@@ -44,9 +44,10 @@ app.post('/api/notes', (req, res) => {
       if (err) {
         objToSend.error = 'an unexpected error occured.';
         res.status(500).json(objToSend);
+      } else {
+        res.status(201).json(objToSend);
       }
     });
-    res.status(201).json(objToSend);
   }
 });
 
@@ -65,8 +66,9 @@ app.delete('/api/notes/:id', (req, res) => {
       if (err) {
         objToSend.error = 'an unexpected error occured.';
         res.status(500).json(objToSend);
+      } else {
+        res.sendStatus(204);
       }
-      res.sendStatus(204);
     });
   }
 });
@@ -90,9 +92,10 @@ app.put('/api/notes/:id', (req, res) => {
       if (err) {
         objToSend.error = 'an unexpected error occured.';
         res.status(500).json(objToSend);
+      } else {
+        res.status(201).json(objToSend);
       }
     });
-    res.status(201).json(objToSend);
   }
 });
 
