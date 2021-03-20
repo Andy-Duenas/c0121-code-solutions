@@ -1,6 +1,8 @@
 const pg = require('pg');
 const express = require('express');
 const app = express();
+const er = require('./errors');
+const inRange = require('./inRange');
 
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
@@ -26,30 +28,18 @@ app.get('/api/grades', (req, res) => {
 const parsedJSON = express.json();
 app.use(parsedJSON);
 
-const inRange = num => {
-  if (parseInt(num) >= 0 && parseInt(num) <= 100) {
-    return true;
-  }
-  return false;
-};
-
 app.post('/api/grades', (req, res) => {
   if (!req.body.name || !req.body.course || !req.body.score) {
-    res.status(400).json({
-      error: 'Missing one of the properties'
-    });
+    res.status(400).json(er.propertyMissing);
     return;
   } else if (!inRange(req.body.score)) {
-    res.status(400).json({
-      error: 'score must be a positve number and between 0 and 100'
-    });
+    res.status(400).json(er.scoreNotBetween);
     return;
   }
   const sql = `
     insert into "grades" ("name","course","score")
     values ($1,$2,$3)
     returning *`;
-
   const values = [req.body.name, req.body.course, req.body.score];
 
   db
@@ -66,10 +56,14 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
   const gradeId = parseInt(req.params.gradeId, 10);
 
-  if (!Number.isInteger(gradeId) || gradeId <= 0 || !req.body.name || !req.body.course || !req.body.score || !inRange(req.body.score)) {
-    res.status(400).json({
-      error: 'Make sure all requirements are fulfilled and gradeId is a positive number'
-    });
+  if (!Number.isInteger(gradeId) || gradeId <= 0) {
+    res.status(400).json(er.notProperId(gradeId));
+    return;
+  } if (!req.body.name || !req.body.course || !req.body.score) {
+    res.status(400).json(er.propertyMissing);
+    return;
+  } else if (!inRange(req.body.score)) {
+    res.status(400).json(er.scoreNotBetween);
     return;
   }
 
@@ -79,8 +73,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
           "course" = $2,
           "score" = $3
     where "gradeId" = $4
-    returning *
-  `;
+    returning *`;
 
   const params = [req.body.name, req.body.course, req.body.score, gradeId];
 
@@ -90,19 +83,14 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
       const grade = result.rows[0];
       if (!grade) {
-
-        res.status(404).json({
-          error: `Cannot find grade with "gradeId" ${gradeId}`
-        });
+        res.status(404).json(er.cantFindId(gradeId));
       } else {
         res.send(200).json(grade);
       }
     })
     .catch(err => {
       console.error(err);
-      res.status(500).json({
-        error: 'An unexpected error occurred.'
-      });
+      res.status(500).json(er.unexpectedError);
     });
 });
 
@@ -111,9 +99,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
   const gradeId = parseInt(req.params.gradeId, 10);
 
   if (!Number.isInteger(gradeId) || gradeId <= 0) {
-    res.status(400).json({
-      error: 'Make sure all requirements are fulfilled and gradeId is a positive number'
-    });
+    res.status(400).json(er.notProperId(gradeId));
     return;
   }
 
@@ -130,18 +116,14 @@ app.delete('/api/grades/:gradeId', (req, res) => {
     .then(result => {
       const grade = result.rows[0];
       if (!grade) {
-        res.status(404).json({
-          error: `Cannot find grade with "gradeId" ${gradeId}`
-        });
+        res.status(404).json(er.cantFindId(gradeId));
       } else {
         res.sendStatus(204);
       }
     })
     .catch(err => {
       console.error(err);
-      res.status(500).json({
-        error: 'An unexpected error occurred.'
-      });
+      res.status(500).json(er.unexpectedError);
     });
 });
 
