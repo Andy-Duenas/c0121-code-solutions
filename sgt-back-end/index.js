@@ -45,10 +45,11 @@ app.post('/api/grades', (req, res) => {
   db
     .query(sql, values)
     .then(success => {
-      res.status(200).json(success.rows);
+      const grade = success.rows[0];
+      res.status(200).json(grade);
     }).catch(error => {
       console.error(`error ${error}`);
-      res.sendStatus(500);
+      res.status(500).json(er.unexpectedError);
     });
 });
 
