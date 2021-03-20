@@ -80,12 +80,11 @@ app.put('/api/grades/:gradeId', (req, res) => {
   db
     .query(sql, params)
     .then(result => {
-
       const grade = result.rows[0];
       if (!grade) {
         res.status(404).json(er.cantFindId(gradeId));
       } else {
-        res.send(200).json(grade);
+        res.status(200).json(grade);
       }
     })
     .catch(err => {
