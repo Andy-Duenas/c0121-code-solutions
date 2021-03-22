@@ -23,16 +23,8 @@ console.log('sum', sum);
 const product = numbers.reduce((accumalator, currentValue) => accumalator * currentValue);
 console.log('product', product);
 
-const balance = account.reduce((accumalator, currentValue) => {
-  if (currentValue.type === 'deposit') {
-    accumalator.amount += currentValue.amount;
-  } else {
-    accumalator.amount -= currentValue.amount;
-  }
-  return accumalator;
-});
-
-console.log('balance', balance.amount);
+const balance = account.reduce((accumalator, currentValue) => currentValue.type === 'deposit' ? accumalator + currentValue.amount : accumalator - currentValue.amount, 0);
+console.log('balance', balance);
 
 const composite = traits.reduce((accumulator, currentValue) => Object.assign(accumulator, currentValue));
 console.log('composite:', composite);
