@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+}
+
+button {
+  width: 20px;
+  height: 20px;
+  border-color: black 2px;
+  border-radius: 8px;
+  outline: none;
+}
+
+div.is-Off {
+  background-color: lightgrey;
+  width: 40px;
+  height: 20px;
+  border-color: black 2px;
+  border-radius: 10px;
+}
+
+button.is-Off {
+  background-color: white;
+}
+
+div.is-On {
+  position: relative;
+  background-color: rgb(79, 143, 79);
+  width: 40px;
+  height: 20px;
+  border-color: black 2px;
+  border-radius: 10px;
+}
+
+button.is-On {
+  position: absolute;
+  right: 0;
+}
+
+span {
+  margin-left: 5px;
+}
