@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.icon {
+  margin: 1rem;
+  font-size: 25px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.menu-container {
+  width: 35%;
+  height: 100%;
+  border-right: 2px solid black;
+  padding-left: 2rem;
+  padding-top: 2rem;
+}
+
+.menu-title {
+  margin: 1rem 0;
+}
+
+.menu-item {
+  margin: 0.5rem 0;
+}
+
+.grey-screen {
+  background-color: gray;
+  width: 65%;
+  height: 100%;
+}
