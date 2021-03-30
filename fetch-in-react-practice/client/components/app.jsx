@@ -52,8 +52,7 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        const newData = this.state.todos;
-        newData.push(data);
+        const newData = this.state.todos.concat(data);
         this.setState({ todos: newData });
       })
       .catch(err => console.error(err));
@@ -78,7 +77,7 @@ export default class App extends React.Component {
     // eslint-disable-next-line no-console
 
     const task = this.state.todos.filter(task => task.todoId === todoId);
-    const newStatus = { isCompleted: task[0].isCompleted !== true };
+    const newStatus = { isCompleted: !task[0].isCompleted };
     const { todos } = this.state;
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
