@@ -74,29 +74,30 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
 
-    // eslint-disable-next-line no-console
-
-    const task = this.state.todos.filter(task => task.todoId === todoId);
-    const newStatus = { isCompleted: !task[0].isCompleted };
-    const { todos } = this.state;
-    fetch(`/api/todos/${todoId}`, {
+    let index = 0;
+    for (let i = 0; i < this.state.todos.length; i++) {
+      if (this.state.todos[i].todoId === todoId) {
+        index = i;
+        break;
+      }
+    }
+    const status = this.state.todos[index].isCompleted;
+    const switchStatus = { isCompleted: !status };
+    const req = {
       method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newStatus)
-    })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(switchStatus)
+    };
+    fetch(`/api/todos/${todoId}`, req)
       .then(res => res.json())
-      .then(data => {
-        for (let i = 0; i < todos.length; i++) {
-          if (todos[i].todoId === todoId) {
-            todos[i] = data;
-          }
-        }
-        this.setState(todos);
+      .then(todo => {
+        const todos = this.state.todos.slice();
+        todos[index] = todo;
+        this.setState({ todos });
       })
-      .catch(err => console.error(err));
-
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   render() {
