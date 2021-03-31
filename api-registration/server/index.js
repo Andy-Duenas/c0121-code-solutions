@@ -50,17 +50,12 @@ app.post('/api/auth/sign-up', (req, res, next) => {
 
       db.query(sql, params)
         .then(result => {
-          const [username, hashedPassword, createdAt] = result.rows;
-          res.status(201).json(username, hashedPassword, createdAt);
+          const [{ createdAt, username, userId }] = result.rows;
+          res.status(201).json({ createdAt, userId, username });
         })
-        .catch(err => {
-          console.error(err);
-        });
+        .catch(err => next(err));
     })
-    .catch(err => {
-      console.error(err);
-    });
-
+    .catch(err => next(err));
 });
 
 app.use(errorMiddleware);
